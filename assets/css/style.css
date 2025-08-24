@@ -475,6 +475,27 @@ header {
 
 /* Advantages end */
 
+/* moving text start */
+.moving-text {
+  white-space: nowrap;
+  display: inline-block;
+  animation: moveLeft 30s linear infinite ;
+  font-size: 16px;
+  font-weight: 50;
+  color: blue;
+}
+
+@keyframes moveLeft {
+  0% {transform: translate(100%);}
+  100% {transform: translate(-100%);}
+}
+
+.container {
+  width: 100%;
+  padding: 10px 0;
+}
+/* moving text end */
+
 /* contact-section start */
 .contact-section {
   background-image: var(--bg-color);
@@ -506,6 +527,8 @@ header {
     margin-top: 20px;
     .form-control {
       margin-bottom: 20px;
+      outline: none;
+      
 
       input[type="text"],
       input[type="email"],
@@ -515,6 +538,10 @@ header {
         color: var(--body-color);
         border-radius: 8px;
         border: 2px solid #dce8ff;
+
+        &:focus {
+          outline: none;
+      }
 
         &::placeholder {
           color: var(--body-color);
